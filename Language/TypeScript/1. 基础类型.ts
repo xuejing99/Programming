@@ -83,7 +83,7 @@ function infiniteLoop(): never {
 
 /**
  * 10. 类型断言
- * 10.1 进行类型转换，只在编译阶段其作用
+ * 10.1 进行类型转换，只在编译阶段起作用
  * 10.2 表示：尖括号法；as 语法
  */
 let someValue: any = "this is a string";
