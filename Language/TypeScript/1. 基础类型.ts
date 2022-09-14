@@ -34,7 +34,7 @@ let list2: Array<number> = [1, 2, 3];
  * 5.1 元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同
  */
 let x: [string, number];
-x = ['hello', 10]; // OK
+x = ['hello', 10];
 
 /**
  * 6. 枚举 Enum
