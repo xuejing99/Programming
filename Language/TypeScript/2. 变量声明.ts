@@ -5,22 +5,17 @@
  * 1.1.2 在块内声明的变量, 在块外亦可访问
  */
 for (var i = 0; i < 10; i++) {
-    setTimeout(function() {
-        console.log(i);  // return '[10, 10, ...]'
-        }, 100 * i);
+    setTimeout(function() { console.log(i); }, 100 * i);
+    // return '[10, 10, ...]'
     // setTimeout 函数在若干毫秒后执行一个函数,
     // 且是在 for 循环结束后, 因此每次打印的值为 10
 }
 for (var i = 0; i < 10; i++) {
     // capture the current state of 'i'
     // by invoking a function with its current value
-    (function(i) {
-        setTimeout(function() {
-            console.log(i);
-            }, 100 * i);
-    })(i);
     // 使用立即执行的函数表达式（IIFE）来捕获每次迭代时i的值
-}
+    (function(i) { setTimeout(function() {
+        console.log(i); }, 100 * i)})(i)}
 
 
 /**
@@ -33,9 +28,7 @@ for (var i = 0; i < 10; i++) {
  * 2.2.1 可在明显不同的块里声明 同名变量, 内部变量会屏蔽外部变量
  */
 for (let i = 0; i < 10 ; i++) {
-    setTimeout(function() {
-        console.log(i);
-        }, 100 * i);
+    setTimeout(function() { console.log(i)}, 100 * i);
 }
 
 
